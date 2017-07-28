@@ -38,6 +38,11 @@ function pluralizer(num,noun) {
         if( noChangeNouns.includes(noun) ) {
             // Plural which doesn't change the noun at all.
             resultString = num + " " + noun;
+        } else if ( deepIndexOf(irregularNouns,noun) != -1) {
+            // If on list of irregularNouns, get index:
+            let indexIrregular = deepIndexOf(irregularNouns,noun);
+                // Replace irregular noun with its plural form:
+            resultString = num + " " + irregularNouns[indexIrregular][1];
         } else {
             // Regular Plural, just at 's'.
             resultString = num + " " + noun + "s";
