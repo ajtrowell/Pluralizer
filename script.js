@@ -7,18 +7,43 @@
 
 
 function pluralizer(num,noun) {
+    // Input Error Checking
+    var isNumArgValid = (typeof(num) === 'number' && num >= 0);
+    if(!isNumArgValid) { show('Error: Invalid number argument!');}
+    var isNounArgValid = (typeof(noun) === 'string');
+    if(!isNounArgValid) { show('Error: Invalid noun argument!');}
+
+    // Initialization
     var resultString;
+    var noChangeNouns = ['sheep','deer','fish','series','species'];
+    var irregularNouns = [
+        ['goose','geese'],
+        ['man','men'],
+        ['child','children'],
+        ['foot','feet'],
+        ['tooth','teeth'],
+        ['mouse','mice'],
+        ['person','people']
+    ];
 
 
-    // Handle normal nouns
+    // Begin Plural Logic
     if(num === 1) {
+    // Case: Single item, no plural
         resultString = num + " " + noun;
-    } else if (num > 1) {
-        resultString = num + " " + noun + "s";
-    } else {
-        show('Error: Invalid number!');
-    }
+    } else if (num > 1 || num === 0) {
+        // Case: Plural. Includes > 1 AND 0, as in "zero dishes."
 
+        // What KIND of plural?
+        if( noChangeNouns.includes(noun) ) {
+            // Plural which doesn't change the noun at all.
+            resultString = num + " " + noun;
+        } else {
+            // Regular Plural, just at 's'.
+            resultString = num + " " + noun + "s";
+        }
+
+    }
 
     return resultString;
 }
@@ -27,6 +52,19 @@ function pluralizer(num,noun) {
 function show(arg) {
     document.write(arg + "<br>");
 }
+
+
+function deepIndexOf(array,searchString) {
+    // Searches first element of each sub array.
+    // Returns index if found, or -1 otherwise
+    for (let i = 0; i<array.length; ++i) {
+        if ( array[i][0].toLowerCase() == searchString.toLowerCase()) {
+            return i;
+        }
+    }
+    return -1; // search string not found
+}
+
 
 
 
