@@ -84,17 +84,28 @@ function testPluralizer(func) {
     var numArguments = 7;
     var inputOutput = [
         ['dog','dogs'],
+        ['cat','cats'],
         ['sheep','sheep'],
+        ['species','species'],
         ['goose','geese'],
+        ['mouse','mice'],
+        ['person','people'],
         ['bus','buses'],
         ['match','matches'],
+        ['dish','dishes'],
         ['box','boxes'],
-        ['tomato','tomatoes'],
+        ['quiz','quizes'],
         ['hero','heroes'],
+        ['echo','echoes'],
+        ['tomato','tomatoes'],
+        ['potato','potatoes'],
         ['wolf','wolves'],
         ['knife','knives'],
         ['city','cities'],
         ['baby','babies'],
+        ['story','stories'],
+        ['party','parties'],
+        ['country','countries']
     ];
 
     var results = [];
