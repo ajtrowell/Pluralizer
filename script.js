@@ -73,9 +73,36 @@ function deepIndexOf(array,searchString) {
 
 
 
+
 // Call function:
+// Regular
 show(pluralizer(1,'dog'));
 show(pluralizer(5,'cat'));
+// Unchanging
 show(pluralizer(4,'sheep'));
+show(pluralizer(33,'species'));
+// Irregular, changes form
 show(pluralizer(5,'goose'));
+show(pluralizer(50,'mouse'));
+show(pluralizer(21,'person'));
+// -> remove F/FE, add VES
+show(pluralizer(7,'wolf'));
+show(pluralizer(302,'knife'));
+// -> Ends in S, CH, SH, X, or Z -> add -ES
+show(pluralizer(7,'bus'));
+show(pluralizer(7,'match'));
+show(pluralizer(7,'dish'));
+show(pluralizer(7,'box'));
+show(pluralizer(7,'quiz'));
+// -> Ends in CONSONANT + O -> add -ES
+show(pluralizer(9,'hero'));
+show(pluralizer(8,'echo'));
+show(pluralizer(5,'tomato'));
+show(pluralizer(4,'potato'));
+// -> Ends in CONSONANT + Y -> Remove Y, add -ES
+show(pluralizer(4,'city'));
+show(pluralizer(4,'baby'));
+show(pluralizer(4,'story'));
+show(pluralizer(4,'party'));
+show(pluralizer(4,'country'));
 
