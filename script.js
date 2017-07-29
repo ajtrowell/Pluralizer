@@ -48,8 +48,7 @@ function pluralizer(num,noun) {
             let indexIrregular = deepIndexOf(irregularNouns,noun);
             // Replace irregular noun with its plural form:
             resultString = num + " " + irregularNouns[indexIrregular][1];
-        }  else if ( noun.search( /(s|ch|sh|x|z|[b-df-hj-np-tv-z]o)$/i ) != -1 ) {
-            // noun.search( /(s|ch|sh|x|z|[b-df-hj-np-tv-z]o)$/i 
+        }  else if ( noun.search( /(s|ch|sh|x|z|(?=[a-z])[^aeiou]o)$/i ) != -1 ) {
             // -> Ends in S, CH, SH, X, or Z -> add -ES
             // -> Ends in CONSONANT + O -> add -ES
             resultString = num + " " + noun + "es";
