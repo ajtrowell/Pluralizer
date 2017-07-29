@@ -46,8 +46,11 @@ function pluralizer(num,noun) {
         } else if ( deepIndexOf(irregularNouns,noun) != -1) {
             // If on list of irregularNouns, get index:
             let indexIrregular = deepIndexOf(irregularNouns,noun);
-                // Replace irregular noun with its plural form:
+            // Replace irregular noun with its plural form:
             resultString = num + " " + irregularNouns[indexIrregular][1];
+        }  else if ( noun.search( /(s|ch|sh|x|z)$/i ) != -1 ) {
+            // -> Ends in S, CH, SH, X, or Z -> add -ES
+            resultString = num + " " + noun + "es";
         } else {
             // Regular Plural, just at 's'.
             resultString = num + " " + noun + "s";
