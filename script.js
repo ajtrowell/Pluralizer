@@ -23,7 +23,12 @@ function pluralizer(num,noun) {
         ['foot','feet'],
         ['tooth','teeth'],
         ['mouse','mice'],
-        ['person','people']
+        ['person','people'],
+        // Exceptions to suffix rules below (works like regular plurals)
+        ['roof','roofs'],
+        ['cliff','cliffs'],
+        ['piano','pianos'],
+        ['photo','photos']
     ];
 
 
