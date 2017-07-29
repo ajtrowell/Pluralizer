@@ -137,7 +137,7 @@ function testPluralizer(func) {
 
 testPluralizer(pluralizer);
 
-
+/*
 
 // Call function:
 // Regular
@@ -170,4 +170,4 @@ show(pluralizer(4,'baby'));
 show(pluralizer(4,'story'));
 show(pluralizer(4,'party'));
 show(pluralizer(4,'country'));
-
+*/
