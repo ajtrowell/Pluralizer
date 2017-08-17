@@ -24,6 +24,8 @@ function pluralizer(num,noun) {
         ['tooth','teeth'],
         ['mouse','mice'],
         ['person','people'],
+        ['ox','oxen'],
+        ['radius','radii'],
         // Exceptions to suffix rules below (works like regular plurals)
         ['roof','roofs'],
         ['cliff','cliffs'],
