@@ -137,6 +137,8 @@ function testPluralizer(func) {
 
 testPluralizer(pluralizer);
 
+alert(pluralizer(2, prompt('Enter Singular Noun to Pluralize','knife')));
+
 /*
 
 // Call function:
